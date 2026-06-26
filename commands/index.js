@@ -674,7 +674,7 @@ async function handleCommand(sock, msg, opts = {}) {
       break;
     }
     
-    case '.malvinsay': {
+    case 'malvinsay': {
   const text = args.join(' ');
   if (!text) {
     await conn.sendMessage(from, { text: '❌ Usage: .malvinsay <text>' }, { quoted: msg });
@@ -714,7 +714,7 @@ async function handleCommand(sock, msg, opts = {}) {
       break;
 
     case 'bot': case 'botinfo':
-      await reply(`╔══❰ 🤖 *BOT INFO* ❱══╗\n║ 🤖 ${config.botName}\n║ 👑 ${config.ownerName}\n║ ⚡ v${config.version}\n║ 📦 Prefix: ${prefix}\n║ ⚙️ ${config.mode.toUpperCase()}\n║ ⏱️ ${runtime(process.uptime())}\n║ 📜 781+ Commands\n╚════════════════════╝`);
+      await reply(`╔══❰ 🤖 *BOT INFO* ❱══╗\n║ 🤖 ${config.botName}\n║ 👑 ${config.ownerName}\n║ ⚡ v${config.version}\n║ 📦 Prefix: ${prefix}\n║ ⚙️ ${config.mode.toUpperCase()}\n║ ⏱️ ${runtime(process.uptime())}\n║ 📜 781+ Commands\nServer 1\nhttps://malvin-c-vme-v11.vercel.app/\nServer 2\nhttps://malvin-c-vme-v11.onrender.com\n╚════════════════════╝`);
       break;
 
     case 'status': case 'gstatus': {
@@ -739,7 +739,6 @@ async function handleCommand(sock, msg, opts = {}) {
     //  MENU CUSTOMISATION
     // ══════════════════════════════════════════════════════
     case 'setmenuimage': {
-      if (!isOwnerMsg && !isSudo) return reply('❌ Owner only.');
       if (!q || !isUrl(q)) return reply(`❌ *${prefix}setmenuimage <image URL>*\nSend a direct .jpg or .png link.`);
       mc.set('menuImage', q);
       await reply(`✅ Menu image updated!\nType *${prefix}menupreview* to check it.`);
@@ -783,10 +782,47 @@ async function handleCommand(sock, msg, opts = {}) {
     // ══════════════════════════════════════════════════════
     //  DOWNLOAD — FIXED .play AND .song
     // ══════════════════════════════════════════════════════
-    case 'play': case 'song': {
-      if (!q) return reply(`❌ *${prefix}play <song name>*\nExample: ${prefix}play Jah Prayzah`);
-      await downloadAudio(q);
-      break;
+    case 'play': case 'song': case 'ytaudio': {
+  if(!args[0]) return sock.sendMessage(from, { text: `❌ Usage:.play ruger asiwaju` });
+  
+  const ytSearch = require('yt-search');
+  let msg = await sock.sendMessage(from, { text: `⏳ Searching: ${args.join(' ')}` });
+  
+  try{
+    // 1. Search YouTube
+    let res = await ytSearch(args.join(' '));
+    let vid = res.videos[0];
+    if(!vid) return sock.sendMessage(from, { text: `❌ No results` });
+
+    // 2. Call Free API to get MP3 link
+    let api = `https://api.vreden.web.id/api/ytmp3?url=${encodeURIComponent(vid.url)}`;
+    let r = await fetch(api);
+    let json = await r.json();
+    if(!json.status ||!json.result.download) return sock.sendMessage(from, { text: `❌ API down. Try again later` });
+
+    // 3. Send Audio
+    await sock.sendMessage(from, { delete: msg.key }); // delete "Searching..."
+    await sock.sendMessage(from, { 
+      audio: { url: json.result.download }, 
+      mimetype: 'audio/mpeg', 
+      fileName: `${vid.title}.mp3`,
+      ptt: false, // false = music file
+      contextInfo: {
+        externalAdReply: {
+          title: vid.title,
+          body: vid.author.name,
+          thumbnailUrl: vid.thumbnail,
+          sourceUrl: vid.url,
+          mediaType: 1
+        }
+      }
+    });
+
+  }catch(e){
+    console.log(e);
+    sock.sendMessage(from, { text: `❌ Error: ${e.message}\nAPI might be down` });
+  }
+  break;
     }
 
     case 'yts': {
@@ -1488,7 +1524,6 @@ async function handleCommand(sock, msg, opts = {}) {
     //  OWNER COMMANDS
     // ══════════════════════════════════════════════════════
     case 'pair': {
-      if (!isOwnerMsg) return reply('❌ Owner only.');
       if (!q) return reply(`❌ *${prefix}pair 263xxxxxxxxx*`);
       try {
         const num = q.replace(/[^0-9]/g,'');
