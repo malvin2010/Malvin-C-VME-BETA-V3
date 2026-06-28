@@ -20,427 +20,476 @@ function buildMenu(prefix) {
   const up = process.uptime();
   const ms = mc.getAll();
   const d=Math.floor(up/86400),h=Math.floor((up%86400)/3600),m=Math.floor((up%3600)/60),s=Math.floor(up%60);
-  return `╔══════════════════════════════╗
-║  🇿🇼  *${ms.botName}*
-║  *${ms.tagline}*
-╚══════════════════════════════╝
+  return `》 *MALVIN C VME* 《
+╔══════════╗
+  🇿🇼 *Malvin C VME* 🇿🇼
+  💻 *Handsome Tech Zimbabwe* 💻
+╚══════════╝
 
-${getGreeting()} 👋
+🌆 *Good Evening* 👋
 
-╔══❰ 🤖 *BOT INFO* ❱══╗
-║ 👑 *Owner:* ${ms.ownerName}
-║ 🤖 *Bot:* ${ms.botName}
-║ 📦 *Prefix:* [ ${prefix} ]
-║ ⚡ *Version:* ${config.version}
-║ 🕐 *Time:* ${ms.showTime?timeNow():'—'}
-║ 📅 *Date:* ${ms.showDate?dateNow():'—'}
-║ ⏱️ *Runtime:* ${ms.showRuntime?`${d}d ${h}h ${m}m ${s}s`:'—'}
-║ 📜 *Commands:* 781+
-║ ⚙️ *Mode:* ${config.mode.toUpperCase()}
-╚══════════════╝
+┌──────────────┐
+│  👑 *Owner:* Malvin C
+│  🤖 *Bot:* Malvin C VME  
+│  📦 *Prefix:* [ . ]
+│  ⚡ *Version:* 1.0.0
+│  🕐 *Time:* 19:19:47
+│  📅 *Date:* Sunday, 28 June 2026
+│  ⏱️ *Runtime:* 0d 0h 58m 54s
+│  📜 *Commands:* 781+
+│  ⚙️ *Mode:* PUBLIC
+└──────────────┘
 
-╔══❰ 🎵 *DOWNLOAD* ❱══╗
-║─☆${prefix}play
-║─☆${prefix}song
-║─☆${prefix}ytv
-║─☆${prefix}yts
-║─☆${prefix}tiktok
-║─☆${prefix}tiktok2
-║─☆${prefix}tiktokphoto
-║─☆${prefix}instagram
-║─☆${prefix}facebook
-║─☆${prefix}twitter
-║─☆${prefix}mediafire
-║─☆${prefix}apk
-║─☆${prefix}modapk
-║─☆${prefix}wastatus
-║─☆${prefix}mega
-║─☆${prefix}play2
-║─☆${prefix}lyrics
-║─☆${prefix}tts
-║─☆${prefix}ringtone
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🎵 *DOWNLOAD*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .play
+  ✦ .song
+  ✦ .ytv
+  ✦ .yts
+  ✦ .tiktok
+  ✦ .tiktok2
+  ✦ .tiktokphoto
+  ✦ .instagram
+  ✦ .facebook
+  ✦ .twitter
+  ✦ .mediafire
+  ✦ .apk
+  ✦ .modapk
+  ✦ .wastatus
+  ✦ .mega
+  ✦ .play2
+  ✦ .lyrics
+  ✦ .tts
+  ✦ .ringtone
 
-╔══❰ 🤖 *AI / CHAT* ❱══╗
-║─☆${prefix}ai
-║─☆${prefix}gpt
-║─☆${prefix}gpt4
-║─☆${prefix}gemini
-║─☆${prefix}claude
-║─☆${prefix}deepseek
-║─☆${prefix}llama
-║─☆${prefix}mistral
-║─☆${prefix}mixtral
-║─☆${prefix}perplexity
-║─☆${prefix}grok
-║─☆${prefix}copilot
-║─☆${prefix}kimi
-║─☆${prefix}qwen
-║─☆${prefix}yi
-║─☆${prefix}imagine
-║─☆${prefix}dalle
-║─☆${prefix}chatbot
-║─☆${prefix}translate
-║─☆${prefix}grammar
-║─☆${prefix}summarize
-║─☆${prefix}math
-║─☆${prefix}quran
-║─☆${prefix}hadith
-║─☆${prefix}bible
-║─☆${prefix}islam
-║─☆${prefix}brain
-║─☆${prefix}think
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🤖 *AI / CHAT*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .ai
+  ✦ .gpt
+  ✦ .gpt4
+  ✦ .gemini
+  ✦ .claude
+  ✦ .deepseek
+  ✦ .llama
+  ✦ .mistral
+  ✦ .mixtral
+  ✦ .perplexity
+  ✦ .grok
+  ✦ .copilot
+  ✦ .kimi
+  ✦ .qwen
+  ✦ .yi
+  ✦ .imagine
+  ✦ .dalle
+  ✦ .chatbot
+  ✦ .translate
+  ✦ .grammar
+  ✦ .summarize
+  ✦ .math
+  ✦ .quran
+  ✦ .hadith
+  ✦ .bible
+  ✦ .islam
+  ✦ .brain
+  ✦ .think
 
-╔══❰ 🖼️ *IMAGE TOOLS* ❱══╗
-║─☆${prefix}sticker
-║─☆${prefix}toimg
-║─☆${prefix}remini
-║─☆${prefix}removebg
-║─☆${prefix}dewatermark
-║─☆${prefix}img
-║─☆${prefix}meme
-║─☆${prefix}waifu
-║─☆${prefix}neko
-║─☆${prefix}kitsune
-║─☆${prefix}animegirl
-║─☆${prefix}animeboy
-║─☆${prefix}catgirl
-║─☆${prefix}foxgirl
-║─☆${prefix}couplepp
-║─☆${prefix}hotgirl
-║─☆${prefix}manga
-║─☆${prefix}chibi
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🖼️ *IMAGE TOOLS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .sticker
+  ✦ .toimg
+  ✦ .remini
+  ✦ .removebg
+  ✦ .dewatermark
+  ✦ .img
+  ✦ .meme
+  ✦ .waifu
+  ✦ .neko
+  ✦ .kitsune
+  ✦ .animegirl
+  ✦ .animeboy
+  ✦ .catgirl
+  ✦ .foxgirl
+  ✦ .couplepp
+  ✦ .hotgirl
+  ✦ .manga
+  ✦ .chibi
 
-╔══❰ 🎌 *ANIME ACTIONS* ❱══╗
-║─☆${prefix}hug
-║─☆${prefix}kiss
-║─☆${prefix}slap
-║─☆${prefix}pat
-║─☆${prefix}cry
-║─☆${prefix}blush
-║─☆${prefix}dance
-║─☆${prefix}wave
-║─☆${prefix}wink
-║─☆${prefix}cuddle
-║─☆${prefix}bite
-║─☆${prefix}lick
-║─☆${prefix}poke
-║─☆${prefix}bonk
-║─☆${prefix}yeet
-║─☆${prefix}highfive
-║─☆${prefix}nom
-║─☆${prefix}bully
-║─☆${prefix}handhold
-║─☆${prefix}smug
-║─☆${prefix}happy
-║─☆${prefix}angry
-║─☆${prefix}smile
-║─☆${prefix}roll
-║─☆${prefix}tickle
-║─☆${prefix}pout
-║─☆${prefix}glomp
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🎌 *ANIME ACTIONS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .hug
+  ✦ .kiss
+  ✦ .slap
+  ✦ .pat
+  ✦ .cry
+  ✦ .blush
+  ✦ .dance
+  ✦ .wave
+  ✦ .wink
+  ✦ .cuddle
+  ✦ .bite
+  ✦ .lick
+  ✦ .poke
+  ✦ .bonk
+  ✦ .yeet
+  ✦ .highfive
+  ✦ .nom
+  ✦ .bully
+  ✦ .handhold
+  ✦ .smug
+  ✦ .happy
+  ✦ .angry
+  ✦ .smile
+  ✦ .roll
+  ✦ .tickle
+  ✦ .pout
+  ✦ .glomp
 
-╔══❰ 👥 *GROUP TOOLS* ❱══╗
-║─☆${prefix}kick
-║─☆${prefix}add
-║─☆${prefix}promote
-║─☆${prefix}demote
-║─☆${prefix}mute
-║─☆${prefix}unmute
-║─☆${prefix}tagall
-║─☆${prefix}hidetag
-║─☆${prefix}antilink
-║─☆${prefix}antidelete
-║─☆${prefix}antispam
-║─☆${prefix}welcome
-║─☆${prefix}goodbye
-║─☆${prefix}setwelcome
-║─☆${prefix}setgoodbye
-║─☆${prefix}link
-║─☆${prefix}revoke
-║─☆${prefix}ginfo
-║─☆${prefix}poll
-║─☆${prefix}gcpp
-║─☆${prefix}autoapprove
-║─☆${prefix}updategname
-║─☆${prefix}updategdesc
-║─☆${prefix}acceptall
-║─☆${prefix}rejectall
-║─☆${prefix}requests
-║─☆${prefix}newgc
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      👥 *GROUP TOOLS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .kick
+  ✦ .add
+  ✦ .promote
+  ✦ .demote
+  ✦ .mute
+  ✦ .unmute
+  ✦ .tagall
+  ✦ .hidetag
+  ✦ .antilink
+  ✦ .antidelete
+  ✦ .antispam
+  ✦ .welcome
+  ✦ .goodbye
+  ✦ .setwelcome
+  ✦ .setgoodbye
+  ✦ .link
+  ✦ .revoke
+  ✦ .ginfo
+  ✦ .poll
+  ✦ .gcpp
+  ✦ .autoapprove
+  ✦ .updategname
+  ✦ .updategdesc
+  ✦ .acceptall
+  ✦ .rejectall
+  ✦ .requests
+  ✦ .newgc
 
-╔══❰ 🛡️ *OWNER ONLY* ❱══╗
-║─☆${prefix}pair
-║─☆${prefix}broadcast
-║─☆${prefix}ban
-║─☆${prefix}sudo
-║─☆${prefix}delsudo
-║─☆${prefix}block
-║─☆${prefix}unblock
-║─☆${prefix}mode
-║─☆${prefix}setprefix
-║─☆${prefix}setbotname
-║─☆${prefix}botdp
-║─☆${prefix}leave
-║─☆${prefix}join
-║─☆${prefix}restart
-║─☆${prefix}vv
-║─☆${prefix}bomb
-║─☆${prefix}send
-║─☆${prefix}malvinsay
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🛡️ *OWNER ONLY*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .pair
+  ✦ .broadcast
+  ✦ .ban
+  ✦ .sudo
+  ✦ .delsudo
+  ✦ .block
+  ✦ .unblock
+  ✦ .mode
+  ✦ .setprefix
+  ✦ .setbotname
+  ✦ .botdp
+  ✦ .leave
+  ✦ .join
+  ✦ .restart
+  ✦ .vv
+  ✦ .bomb
+  ✦ .send
+  ✦ .malvinsay
 
-╔═❰ 🎨 *MENU CUSTOMISE* ❱═╗
-║─☆${prefix}setmenuimage
-║─☆${prefix}settagline
-║─☆${prefix}setmenufooter
-║─☆${prefix}menutheme
-║─☆${prefix}toggletime
-║─☆${prefix}toggledate
-║─☆${prefix}toggleruntime
-║─☆${prefix}menupreview
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🎨 *MENU CUSTOMISE*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .setmenuimage
+  ✦ .settagline
+  ✦ .setmenufooter
+  ✦ .menutheme
+  ✦ .toggletime
+  ✦ .toggledate
+  ✦ .toggleruntime
+  ✦ .menupreview
 
-╔══❰ ⚙️ *SETTINGS* ❱══╗
-║─☆${prefix}autoread
-║─☆${prefix}autotyping
-║─☆${prefix}autorecording
-║─☆${prefix}autoreact
-║─☆${prefix}statusview
-║─☆${prefix}statuslike
-║─☆${prefix}anticall
-║─☆${prefix}online
-║─☆${prefix}settings
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      ⚙️ *SETTINGS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .autoread
+  ✦ .autotyping
+  ✦ .autorecording
+  ✦ .autoreact
+  ✦ .statusview
+  ✦ .statuslike
+  ✦ .anticall
+  ✦ .online
+  ✦ .settings
 
-╔══❰ 📜 *ADMIN TOOLS* ❱══╗
-║─☆${prefix}del
-║─☆${prefix}warn
-║─☆${prefix}warns
-║─☆${prefix}resetwarn
-║─☆${prefix}getpp
-║─☆${prefix}simdata
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      📜 *ADMIN TOOLS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .del
+  ✦ .warn
+  ✦ .warns
+  ✦ .resetwarn
+  ✦ .getpp
+  ✦ .simdata
 
-╔══❰ 🎮 *FUN* ❱══╗
-║─☆${prefix}joke
-║─☆${prefix}meme
-║─☆${prefix}quote
-║─☆${prefix}fact
-║─☆${prefix}roast
-║─☆${prefix}compliment
-║─☆${prefix}ship
-║─☆${prefix}lovetest
-║─☆${prefix}8ball
-║─☆${prefix}coinflip
-║─☆${prefix}dice
-║─☆${prefix}truth
-║─☆${prefix}dare
-║─☆${prefix}pickupline
-║─☆${prefix}rate
-║─☆${prefix}horoscope
-║─☆${prefix}hack
-║─☆${prefix}aura
-║─☆${prefix}compatibility
-║─☆${prefix}propose
-║─☆${prefix}breakup
-║─☆${prefix}crush
-║─☆${prefix}husband
-║─☆${prefix}wife
-║─☆${prefix}bacha
-║─☆${prefix}bachi
-║─☆${prefix}flirt2
-║─☆${prefix}emoji
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🎮 *FUN*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .joke
+  ✦ .meme
+  ✦ .quote
+  ✦ .fact
+  ✦ .roast
+  ✦ .compliment
+  ✦ .ship
+  ✦ .lovetest
+  ✦ .8ball
+  ✦ .coinflip
+  ✦ .dice
+  ✦ .truth
+  ✦ .dare
+  ✦ .pickupline
+  ✦ .rate
+  ✦ .horoscope
+  ✦ .hack
+  ✦ .aura
+  ✦ .compatibility
+  ✦ .propose
+  ✦ .breakup
+  ✦ .crush
+  ✦ .husband
+  ✦ .wife
+  ✦ .bacha
+  ✦ .bachi
+  ✦ .flirt2
+  ✦ .emoji
 
-╔══❰ 💬 *FUN TEXT* ❱══╗
-║─☆${prefix}personalitytest
-║─☆${prefix}superpower
-║─☆${prefix}pastlife
-║─☆${prefix}darksecret
-║─☆${prefix}celebmatch
-║─☆${prefix}lifebattery
-║─☆${prefix}soulcolor
-║─☆${prefix}whatanimal
-║─☆${prefix}nightowl
-║─☆${prefix}stresslevel
-║─☆${prefix}emotionaldamage
-║─☆${prefix}animepersonality
-║─☆${prefix}friendtype
-║─☆${prefix}weeklyreport
-║─☆${prefix}challenge
-║─☆${prefix}gossip
-║─☆${prefix}storygen
-║─☆${prefix}wikifact
-║─☆${prefix}desiwisdom
-║─☆${prefix}kindness
-║─☆${prefix}motivationalslap
-║─☆${prefix}wisdomcookie
-║─☆${prefix}taunt
-║─☆${prefix}botroast
-║─☆${prefix}result
-║─☆${prefix}examseason
-║─☆${prefix}ishqmeter
-║─☆${prefix}naammatlab
-║─☆${prefix}numbergame
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      💬 *FUN TEXT*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .personalitytest
+  ✦ .superpower
+  ✦ .pastlife
+  ✦ .darksecret
+  ✦ .celebmatch
+  ✦ .lifebattery
+  ✦ .soulcolor
+  ✦ .whatanimal
+  ✦ .nightowl
+  ✦ .stresslevel
+  ✦ .emotionaldamage
+  ✦ .animepersonality
+  ✦ .friendtype
+  ✦ .weeklyreport
+  ✦ .challenge
+  ✦ .gossip
+  ✦ .storygen
+  ✦ .wikifact
+  ✦ .desiwisdom
+  ✦ .kindness
+  ✦ .motivationalslap
+  ✦ .wisdomcookie
+  ✦ .taunt
+  ✦ .botroast
+  ✦ .result
+  ✦ .examseason
+  ✦ .ishqmeter
+  ✦ .naammatlab
+  ✦ .numbergame
 
-╔══❰ 🎰 *GAMES* ❱══╗
-║─☆${prefix}rps
-║─☆${prefix}riddle
-║─☆${prefix}trivia
-║─☆${prefix}quiz
-║─☆${prefix}mathquiz
-║─☆${prefix}wordscramble
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🎰 *GAMES*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .rps
+  ✦ .riddle
+  ✦ .trivia
+  ✦ .quiz
+  ✦ .mathquiz
+  ✦ .wordscramble
 
-╔══❰ 🔧 *UTILITY* ❱══╗
-║─☆${prefix}weather
-║─☆${prefix}news
-║─☆${prefix}wiki
-║─☆${prefix}define
-║─☆${prefix}qr
-║─☆${prefix}base64
-║─☆${prefix}binary
-║─☆${prefix}urlencode
-║─☆${prefix}url
-║─☆${prefix}screenshot
-║─☆${prefix}npm
-║─☆${prefix}readmore
-║─☆${prefix}prayertime
-║─☆${prefix}boost
-║─☆${prefix}timenow
-║─☆${prefix}ping
-║─☆${prefix}uptime
-║─☆${prefix}alive
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🔧 *UTILITY*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .weather
+  ✦ .news
+  ✦ .wiki
+  ✦ .define
+  ✦ .qr
+  ✦ .base64
+  ✦ .binary
+  ✦ .urlencode
+  ✦ .url
+  ✦ .screenshot
+  ✦ .npm
+  ✦ .readmore
+  ✦ .prayertime
+  ✦ .boost
+  ✦ .timenow
+  ✦ .ping
+  ✦ .uptime
+  ✦ .alive
 
-╔══❰ 🕵️ *STALKER* ❱══╗
-║─☆${prefix}github
-║─☆${prefix}githubstalk
-║─☆${prefix}pinsearch
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🕵️ *STALKER*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .github
+  ✦ .githubstalk
+  ✦ .pinsearch
 
-╔══❰ 🏅 *RESPECT* ❱══╗
-║─☆${prefix}respect
-║─☆${prefix}salute
-║─☆${prefix}legend
-║─☆${prefix}king
-║─☆${prefix}queen
-║─☆${prefix}boss
-║─☆${prefix}champion
-║─☆${prefix}blessed
-║─☆${prefix}mashallah
-║─☆${prefix}jazakallah
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🏅 *RESPECT*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .respect
+  ✦ .salute
+  ✦ .legend
+  ✦ .king
+  ✦ .queen
+  ✦ .boss
+  ✦ .champion
+  ✦ .blessed
+  ✦ .mashallah
+  ✦ .jazakallah
 
-╔══❰ 🖼️ *DP PACKS* ❱══╗
-║─☆${prefix}boydp1
-║─☆${prefix}boydp2
-║─☆${prefix}boydp3
-║─☆${prefix}boydp4
-║─☆${prefix}boydp5
-║─☆${prefix}boydp6
-║─☆${prefix}boydp7
-║─☆${prefix}boydp8
-║─☆${prefix}boydp9
-║─☆${prefix}boydp10
-║─☆${prefix}boydp11
-║─☆${prefix}boydp12
-║─☆${prefix}boydp13
-║─☆${prefix}boydp14
-║─☆${prefix}boydp15
-║─☆${prefix}boydp16
-║─☆${prefix}boydp17
-║─☆${prefix}boydp18
-║─☆${prefix}boydp19
-║─☆${prefix}boydp20
-║─☆${prefix}boydp21
-║─☆${prefix}boydp22
-║─☆${prefix}girldp1
-║─☆${prefix}girldp2
-║─☆${prefix}girldp3
-║─☆${prefix}girldp4
-║─☆${prefix}girldp5
-║─☆${prefix}girldp6
-║─☆${prefix}girldp7
-║─☆${prefix}girldp8
-║─☆${prefix}girldp9
-║─☆${prefix}girldp10
-║─☆${prefix}girldp11
-║─☆${prefix}girldp12
-║─☆${prefix}girldp13
-║─☆${prefix}girldp14
-║─☆${prefix}girldp15
-║─☆${prefix}girldp16
-║─☆${prefix}girldp17
-║─☆${prefix}girldp18
-║─☆${prefix}girldp19
-║─☆${prefix}girldp20
-║─☆${prefix}girldp21
-║─☆${prefix}girldp22
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🖼️ *DP PACKS*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .boydp1
+  ✦ .boydp2
+  ✦ .boydp3
+  ✦ .boydp4
+  ✦ .boydp5
+  ✦ .boydp6
+  ✦ .boydp7
+  ✦ .boydp8
+  ✦ .boydp9
+  ✦ .boydp10
+  ✦ .boydp11
+  ✦ .boydp12
+  ✦ .boydp13
+  ✦ .boydp14
+  ✦ .boydp15
+  ✦ .boydp16
+  ✦ .boydp17
+  ✦ .boydp18
+  ✦ .boydp19
+  ✦ .boydp20
+  ✦ .boydp21
+  ✦ .boydp22
+  ✦ .girldp1
+  ✦ .girldp2
+  ✦ .girldp3
+  ✦ .girldp4
+  ✦ .girldp5
+  ✦ .girldp6
+  ✦ .girldp7
+  ✦ .girldp8
+  ✦ .girldp9
+  ✦ .girldp10
+  ✦ .girldp11
+  ✦ .girldp12
+  ✦ .girldp13
+  ✦ .girldp14
+  ✦ .girldp15
+  ✦ .girldp16
+  ✦ .girldp17
+  ✦ .girldp18
+  ✦ .girldp19
+  ✦ .girldp20
+  ✦ .girldp21
+  ✦ .girldp22
 
-╔══❰ 🔓 *UNBAN* ❱══╗
-║─☆${prefix}unban1
-║─☆${prefix}unban2
-║─☆${prefix}unban3
-║─☆${prefix}unban4
-║─☆${prefix}unban5
-║─☆${prefix}unban6
-║─☆${prefix}unban7
-║─☆${prefix}unban8
-║─☆${prefix}unban9
-║─☆${prefix}unban10
-║─☆${prefix}unban11
-║─☆${prefix}unban12
-║─☆${prefix}unban13
-║─☆${prefix}unban14
-║─☆${prefix}unban15
-║─☆${prefix}unban16
-║─☆${prefix}unban17
-║─☆${prefix}unban18
-║─☆${prefix}unban19
-║─☆${prefix}unban20
-║─☆${prefix}unban22
-║─☆${prefix}unban21
-║─☆${prefix}unban23
-║─☆${prefix}unban24
-║─☆${prefix}unban25
-║─☆${prefix}unban26
-║─☆${prefix}unban27
-║─☆${prefix}unban28
-║─☆${prefix}unban29
-║─☆${prefix}unban30
-║─☆${prefix}unban31
-║─☆${prefix}unban32
-║─☆${prefix}unban33
-║─☆${prefix}unban34
-║─☆${prefix}unban35
-║─☆${prefix}unban36
-║─☆${prefix}unban37
-║─☆${prefix}unban38
-║─☆${prefix}unban39
-║─☆${prefix}unban40
-║─☆${prefix}unban41
-║─☆${prefix}unban42
-║─☆${prefix}unban43
-║─☆${prefix}unban44
-║─☆${prefix}unban45
-║─☆${prefix}unban46
-║─☆${prefix}unban47
-║─☆${prefix}unban48
-║─☆${prefix}unbanlist
-║─☆${prefix}unbanguide
-╚══════════════╝
+◇━━━━━━━━━━━━━━━◇
+      🔓 *UNBAN*
+◇━━━━━━━━━━━━━━━◇
+  ✦ .unban1
+  ✦ .unban2
+  ✦ .unban3
+  ✦ .unban4
+  ✦ .unban5
+  ✦ .unban6
+  ✦ .unban7
+  ✦ .unban8
+  ✦ .unban9
+  ✦ .unban10
+  ✦ .unban11
+  ✦ .unban12
+  ✦ .unban13
+  ✦ .unban14
+  ✦ .unban15
+  ✦ .unban16
+  ✦ .unban17
+  ✦ .unban18
+  ✦ .unban19
+  ✦ .unban20
+  ✦ .unban21
+  ✦ .unban22
+  ✦ .unban23
+  ✦ .unban24
+  ✦ .unban25
+  ✦ .unban26
+  ✦ .unban27
+  ✦ .unban28
+  ✦ .unban29
+  ✦ .unban30
+  ✦ .unban31
+  ✦ .unban32
+  ✦ .unban33
+  ✦ .unban34
+  ✦ .unban35
+  ✦ .unban36
+  ✦ .unban37
+  ✦ .unban38
+  ✦ .unban39
+  ✦ .unban40
+  ✦ .unban41
+  ✦ .unban42
+  ✦ .unban43
+  ✦ .unban44
+  ✦ .unban45
+  ✦ .unban46
+  ✦ .unban47
+  ✦ .unban48
+  ✦ .unbanlist
+  ✦ .unbanguide
 
+◇━━━━━━━━━━━━━━━◇
 
-> ${ms.menuFooter}
-> 💻 *${ms.botName} v${config.version}*`;
+> 🇿🇼 Powered by Handsome Tech Zimbabwe
+> 💻 *Malvin C VME v1.0.0*`;await react("🚀");
+
+      // Method 1 — image + buttons
+      try {
+        await sock.sendMessage(from, {
+          image: { url: "https://i.ibb.co/W3YNd5B/zim-xmd.jpg" },
+          caption: MENU,
+          footer: "🇿🇼 ZIM XMD ULTIMATE | By Malvin C",
+          buttons: [
+            {
+              buttonId: ".alive",
+              buttonText: { displayText: "✅ ALIVE" },
+              type: 1,
+            },
+            {
+              buttonId: ".ping",
+              buttonText: { displayText: "🏓 PING" },
+              type: 1,
+            },
+            {
+              buttonId: ".owner",
+              buttonText: { displayText: "👑 OWNER" },
+              type: 1
+            } // <-- no comma here because it's the last button
+          ], // <-- close buttons array
+          headerType: 4 // <-- REQUIRED: 4 = image + caption + buttons
+        }, { quoted: msg }); // <-- close sendMessage
+      } catch (e) {
+        console.log(e);
+        // Method 2 fallback = list/template message here
+    }
 }
 
 // ─── Main handler ─────────────────────────────────────────────
